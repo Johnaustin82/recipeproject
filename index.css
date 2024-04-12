@@ -1,12 +1,37 @@
+*{
+    margin: 2px;
+    padding: 2px;
+}
+
 body{
     background-color: white;
-    color: black;
+    color: #353b45;
+    font-family: fantasy;
 }
 
 .dark-mode {
     background-color: black;
     color: white;
 }
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    border-bottom: 20px;
+    box-shadow: 0 4px 8px #f53707f1;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
 .slides {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -18,7 +43,7 @@ body{
    }
    
 .slides img {
-    width: 100%;
+    width: auto;
     height: auto;
 }
    
@@ -47,7 +72,7 @@ body{
 .slides {
     display: none;
     width: 100%;
-    position: absolute;
+    position: relative;
 }
    
 .slides img {
@@ -60,3 +85,49 @@ body{
 }
 
 
+.btn:hover{
+    background-color: #ff4500;
+    cursor: pointer;
+}
+
+.form {
+    position: relative;
+    margin: 2px;
+    width: 80%; 
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px #f53707f1;
+}
+
+
+#recipe-form #description{
+    width: 70%;
+    height: 80px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#recipe-form #ingredients{
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#recipe-form #instructions{
+    width: 100%;
+    height: 400px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

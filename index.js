@@ -102,5 +102,45 @@ document.getElementById("light-mode").addEventListener("click", () => {
 document.getElementById("dark-mode").addEventListener("click", () => {
   document.body.classList.add("dark-mode");
 });
+
+function submitRecipe(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  const title = document.getElementById('title').value;
+  const ingredients = document.getElementById('ingredients').value;
+  const instructions = document.getElementById('instructions').value;
+
+  // Create the recipe object
+  const recipe = {
+      title: title,
+      ingredients: ingredients,
+      instructions: instructions
+  };
+
+  // Send a POST request to the server
+  fetch(`${baseUrl}/recipes`, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(recipe)
+  })
+  .then(response => {
+      if (response.ok) {
+          console.log('Recipe created successfully');
+          // Optionally, clear the form after successful submission
+          document.getElementById('recipe-form').reset();
+      } else {
+          console.error('Failed to create recipe');
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
+
+// Add event listener to the submit button
+document.getElementById('recipe-form').addEventListener('submit', submitRecipe);
+
 })
 

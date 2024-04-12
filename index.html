@@ -9,10 +9,11 @@
 <body>
 <h1>Soul food restuarant recipes</h1>
 
-  <button id="light-mode">light-mode</button><button id="dark-mode">dark-mode</button>
+  <button class="btn" id="light-mode">light-mode</button><button class="btn" id="dark-mode">dark-mode</button>
+  
   <div class="slideshow">
-    <div class="cards">
     <div class="slides" id="falafel">
+      <div class="card">
       <h2 class="title" id="falafel-title"></h2>
       <h3>
       <p class="description" id="falafel-description"></p>
@@ -24,11 +25,13 @@
         <ul class="instructions" id="falafel-instruction"></ul>
       </h4>
       <img src="" alt="" id="falafel-image">
+      </div>
     </div> 
-    </dir>
+    
       
     
     <div class="slides" id="flatbread">
+      <div class="card">
       <h2 class="title" id="chapati-title"></h2>
       <h3>
       <p class="description" id="chapati-description"></p>
@@ -38,9 +41,11 @@
         <ul class="instructions" id="chapati-instruction"></ul>
       </h4>
       <img src="" alt="" id="chapati-image">
+      </div>
     </div>
 
     <div class="slides" id="beef">
+      <div class="card">
       <h2 class="title" id="beef-title"></h2>
       <h3>
       <p class="description" id="beef-description"></p>
@@ -50,10 +55,12 @@
         <ul class="instructions" id="beef-instruction">instructions</ul>
       </h4>
       <img src="" alt="" id="beef-image">
+      </div>
     </div>
 
 
     <div class="slides" id="ugali">
+      <div class="card">
       <h2 class="title" id="ugali-title"></h2>
       <h3>
       <p class="description" id="ugali-description"></p>
@@ -63,10 +70,34 @@
         <ul class="instructions" id="ugali-instruction">instructions</ul>
       </h4>
       <img src="" alt="" id="ugali-image">
+      </div>
     </div>
-    <button id="prev-slide">Previous</button>
-    <button id="next-slide">Next</button>
+    <button class="btn" id="prev-slide">Previous</button>
+    <button class="btn" id="next-slide">Next</button>
   </div>
+  <div class="form">
+    <form id="recipe-form">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br>
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea><br>
+      
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" required></textarea><br>
+      
+      <label for="instructions">Instructions:</label>
+      <textarea id="instructions" name="instructions" required></textarea><br>
+      
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" name="image"><br>
+      
+      <button class="btn" type="submit">Create Recipe</button>
+    </form>
+  </div>
+
+
+  
   
   
   <script src="index.js"></script>
