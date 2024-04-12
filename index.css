@@ -15,9 +15,10 @@ body{
 }
 
 .card {
+    width: 70%;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 20px;
     box-shadow: 0 4px 8px #f53707f1;
   }
@@ -102,7 +103,7 @@ body{
 
 
 #recipe-form #description{
-    width: 70%;
+    width: 100%;
     height: 80px;
     padding: 8px;
     margin-bottom: 10px;
