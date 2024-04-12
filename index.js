@@ -104,20 +104,20 @@ document.getElementById("dark-mode").addEventListener("click", () => {
 });
 
 function submitRecipe(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+  event.preventDefault();
 
   const title = document.getElementById('title').value;
   const ingredients = document.getElementById('ingredients').value;
   const instructions = document.getElementById('instructions').value;
 
-  // Create the recipe object
+  
   const recipe = {
       title: title,
       ingredients: ingredients,
       instructions: instructions
   };
 
-  // Send a POST request to the server
+  
   fetch(`${baseUrl}/recipes`, {
       method: 'POST',
       headers: {
@@ -128,7 +128,7 @@ function submitRecipe(event) {
   .then(response => {
       if (response.ok) {
           console.log('Recipe created successfully');
-          // Optionally, clear the form after successful submission
+          
           document.getElementById('recipe-form').reset();
       } else {
           console.error('Failed to create recipe');
@@ -139,7 +139,7 @@ function submitRecipe(event) {
   });
 }
 
-// Add event listener to the submit button
+
 document.getElementById('recipe-form').addEventListener('submit', submitRecipe);
 
 })
