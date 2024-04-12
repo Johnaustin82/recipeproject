@@ -107,15 +107,18 @@ function submitRecipe(event) {
   event.preventDefault();
 
   const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
   const ingredients = document.getElementById('ingredients').value;
   const instructions = document.getElementById('instructions').value;
-
+  const image = document.getElementById('image').value;
   
   const recipe = {
       title: title,
+      description:description,
       ingredients: ingredients,
+      image: image,
       instructions: instructions
-  };
+    };
 
   
   fetch(`${baseUrl}/recipes`, {
