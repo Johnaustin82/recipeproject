@@ -118,7 +118,8 @@ function submitRecipe(event) {
       ingredients: ingredients,
       image: image,
       instructions: instructions
-    };
+
+  };
 
   
   fetch(`${baseUrl}/recipes`, {
@@ -144,6 +145,36 @@ function submitRecipe(event) {
 
 
 document.getElementById('recipe-form').addEventListener('submit', submitRecipe);
+const deleteButtons = document.querySelectorAll('.delete-btn');
+
+function handleDeleteClick(event) {
+  event.preventDefault();
+  const recipeId = event.target.getAttribute('data-id');
+  const confirmDelete = confirm('Are you sure you want to delete this recipe?');
+  if (confirmDelete) {
+    fetch(`http://localhost:3000/recipes/${recipeId}`, {
+      method: 'DELETE'
+    })
+    .then(response => {
+      if (response.ok) {
+        const recipeCard = event.target.closest('.card');
+        if (recipeCard) {
+          recipeCard.remove();
+          console.log('Recipe deleted successfully');
+        }
+      } else {
+        console.error('Failed to delete recipe');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+}
+
+deleteButtons.forEach(button => {
+  button.addEventListener('click', handleDeleteClick);
+});
 
 })
 
