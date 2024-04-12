@@ -70,25 +70,30 @@ document.getElementById('ugali')
           document.getElementById("ugali-image").src = recipes.image;
        })
 
-let slideIndex = 0;
- const slides = document.querySelectorAll('.slides');
+       let slideIndex = 0;
+       const slides = document.querySelectorAll('.slides');
        
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-    slide.style.display = i === index ? 'block' : 'none';
-    });
-
-}
+       function showSlide(index) {
+           slides.forEach((slide, i) => {
+               slide.style.display = i === index ? 'block' : 'none';
+           });
+       }
        
-function nextSlide() {
-    slideIndex = (slideIndex + 1) % slides.length;
-    showSlide(slideIndex);
-}
+       function nextSlide() {
+           slideIndex = (slideIndex + 1) % slides.length;
+           showSlide(slideIndex);
+       }
        
-
-showSlide(slideIndex);
+       function prevSlide() {
+           slideIndex = (slideIndex - 1 + slides.length) % slides.length; 
+           showSlide(slideIndex);
+       }
        
-setInterval(nextSlide, 5000);
+       showSlide(slideIndex);
+      
+       document.getElementById("next-slide").addEventListener("click", nextSlide);
+       document.getElementById("prev-slide").addEventListener("click", prevSlide);
+       
        
 document.getElementById("light-mode").addEventListener("click", () => {
   document.body.classList.remove("dark-mode");
