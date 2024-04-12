@@ -140,3 +140,7 @@ body{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.delete-btn:hover{
+    background-color: #ff4500;
+}
