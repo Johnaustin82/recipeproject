@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": 1,
-      "title": "1.falafel",
+      "title": "falafel",
       "image": "https://media.istockphoto.com/id/1446697978/photo/two-falafels-and-a-broken-half-on-a-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=NC2nrEPpIFon3rhGIxNQSLDutn1uC6SZ8koQvV0HC10=",
       "description": "Crispy and flavorful chickpea patties, perfect for stuffing into pitas or serving with tahini sauce.",
       "ingredients": [
@@ -35,7 +35,7 @@
     {
       "id": 2,
       "title": "2.Chapati",
-      "image": "https://media.istockphoto.com/id/1296798642/photo/roti-parata-or-roti-canai-with-lamb-curry-sauce-popular-malaysian-breakfast.jpg?s=612x612&w=0&k=20&c=fF4AYfw8w7fxZNDKW-xenP8O7KIs7xQTf0KuCuFGIj8=",
+      "image": "https://media.istockphoto.com/id/1298650125/photo/homemade-roti-chapati-flatbread.jpg?s=612x612&w=0&k=20&c=C7BH_JgNd4u9L-kYWfPUYVIEIecw5A2deVktAPlTL-g=",
       "description": "A classic flatbread.",
       "ingredients": [
         "2 cups whole wheat flour",
