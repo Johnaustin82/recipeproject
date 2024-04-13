@@ -16,7 +16,7 @@ body{
 
 .card {
     width: 70%;
-    border: 1px solid #ccc;
+    border: 1px solid #e0720b;
     border-radius: 8px;
     padding: 10px;
     border-bottom: 20px;
@@ -144,4 +144,40 @@ body{
 
 .delete-btn:hover{
     background-color: #ff4500;
+    cursor: pointer;
+}
+
+#form {
+    position: relative;
+    margin: 25px;
+    width: 80%; 
+    border: 1px solid orange;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px #f53707f1;
+}
+
+#image-form #recipe-title {
+    width: 30%;
+    height: 20px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;   
+}
+
+#image-form #new-image {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;   
+}
+
+.update-btn:hover{
+    background-color: #ff4500;
+    cursor: pointer;
 }
