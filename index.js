@@ -142,15 +142,14 @@ function submitRecipe(event) {
       console.error('Error:', error);
   });
 }
+document.querySelector('.create-recipe').addEventListener('click', submitRecipe);
+
 
 document.getElementById('image-form').addEventListener('submit', function(event) {
   event.preventDefault();
   
-  
-
-  // Get the recipe ID and new image URL values
-  const recipeTitle = document.getElementById('recipe-title').value;
-  const newImageUrl = document.getElementById('new-image-url').value;
+const recipeId = document.getElementById('recipe-title').value;
+  const newImageUrl = document.getElementById('new-image').value;
 
   
   const data = {
@@ -158,7 +157,7 @@ document.getElementById('image-form').addEventListener('submit', function(event)
   };
 
 
-  fetch(`${baseUrl}/recipes/${recipeTitle}`, {
+  fetch(`${baseUrl}/recipes/${recipeId}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -213,8 +212,6 @@ function handleDeleteClick(event) {
 deleteButtons.forEach(button => {
   button.addEventListener('click', handleDeleteClick);
 });
-
-
 
 })
 
