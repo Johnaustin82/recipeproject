@@ -143,12 +143,50 @@ function submitRecipe(event) {
   });
 }
 
+document.getElementById('image-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  
+
+  // Get the recipe ID and new image URL values
+  const recipeTitle = document.getElementById('recipe-title').value;
+  const newImageUrl = document.getElementById('new-image-url').value;
+
+  
+  const data = {
+    image: newImageUrl
+  };
+
+
+  fetch(`${baseUrl}/recipes/${recipeTitle}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Image URL updated successfully!');
+    } else {
+      console.log('Failed to update the image URL.');
+    }
+  })
+  .catch(error => {
+    console.log('An error occurred while updating the image URL:', error);
+  });
+});
+
+
 
 document.getElementById('recipe-form').addEventListener('submit', submitRecipe);
 const deleteButtons = document.querySelectorAll('.delete-btn');
 
 function handleDeleteClick(event) {
+  
   event.preventDefault();
+
+  
   const recipeId = event.target.getAttribute('data-id');
   const confirmDelete = confirm('Are you sure you want to delete this recipe?');
   if (confirmDelete) {
@@ -175,6 +213,8 @@ function handleDeleteClick(event) {
 deleteButtons.forEach(button => {
   button.addEventListener('click', handleDeleteClick);
 });
+
+
 
 })
 

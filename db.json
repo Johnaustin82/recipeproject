@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": 1,
-      "title": "falafel",
+      "title": "1.falafel",
       "image": "https://media.istockphoto.com/id/1446697978/photo/two-falafels-and-a-broken-half-on-a-white-background-isolated.webp?b=1&s=170667a&w=0&k=20&c=NC2nrEPpIFon3rhGIxNQSLDutn1uC6SZ8koQvV0HC10=",
       "description": "Crispy and flavorful chickpea patties, perfect for stuffing into pitas or serving with tahini sauce.",
       "ingredients": [
@@ -34,8 +34,8 @@
     },
     {
       "id": 2,
-      "title": "Chapati",
-      "image": "https://media.istockphoto.com/id/1292639145/photo/chapati-isolated-over-a-rustic-wooden-background-selective-focus.webp?b=1&s=170667a&w=0&k=20&c=9dTlaG1hDpbzKGAjTz8FI5xPcw3O0b7hrpps9V9NJpk=",
+      "title": "2.Chapati",
+      "image": "https://media.istockphoto.com/id/1296798642/photo/roti-parata-or-roti-canai-with-lamb-curry-sauce-popular-malaysian-breakfast.jpg?s=612x612&w=0&k=20&c=fF4AYfw8w7fxZNDKW-xenP8O7KIs7xQTf0KuCuFGIj8=",
       "description": "A classic flatbread.",
       "ingredients": [
         "2 cups whole wheat flour",
@@ -59,7 +59,7 @@
     },
     {
       "id": 3,
-      "title": "Beef Stew",
+      "title": "3.Beef Stew",
       "image": "https://media.istockphoto.com/id/1058029026/photo/beef-bourguignon.webp?b=1&s=170667a&w=0&k=20&c=vnbC79AFgixk7g5bHzsBhgzt2zIqJbsm-pjv5ot1Nwo=",
       "description": "A classic kenyan beef stew.",
       "ingredients": [
@@ -87,7 +87,7 @@
     },
     {
       "id": 4,
-      "title": "Ugali",
+      "title": "4.Ugali",
       "image": "https://media.istockphoto.com/id/1208410082/photo/african-maize-porridge-in-transparent-small-bowl.webp?b=1&s=170667a&w=0&k=20&c=Mrx3WU7lH0Lnb0U9QDUYVNJqoOsLAotbdCBTyARZWyI=",
       "description": "A staple food in Kenya,the ugali.",
       "ingredients": [
