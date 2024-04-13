@@ -147,6 +147,11 @@ body{
     cursor: pointer;
 }
 
+.create-recipe:hover{
+    background-color: #ff4500;
+    cursor: pointer;
+}
+
 #form {
     position: relative;
     margin: 25px;
